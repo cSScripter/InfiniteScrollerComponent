@@ -10,6 +10,9 @@ React + TypeScript + Vite
 - Scroll paused on hover
 - Easy to customize and reuse
 
+## Preview
+
+https://infinite-scroller-component.vercel.app/
 
 ## License
 
