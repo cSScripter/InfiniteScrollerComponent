@@ -7,16 +7,21 @@
   0% {
     transform: translateX(0%);
   }
-  100% {
-    transform: translateX(20%); /*-20% to reverse */
+100% {
+    transform: translateX(10%); /*-20% to reverse */
   }
 }
 
 .animate-infinite-scroll {
   animation: infinite-scroll 20s linear infinite;
+  will-change: transform;
 }
 
 .animate-infinite-scroll:hover {
   animation-play-state: paused; /*delete if you don't want on-hover pause */
 }
+}
+
+#root {
+  overflow-x: hidden;
 }

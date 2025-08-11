@@ -7,12 +7,12 @@ interface ScrollerProps {
 const Scroller: React.FC<ScrollerProps> = ({ darkMode }) => {
   const images = getImages(darkMode);
 
-  // Repeat images 5 times
-  const repeatedImages = [...images, ...images, ...images, ...images, ...images];
+  const repeatCount = 10;
+  const repeatedImages = Array(repeatCount).fill(images).flat();
 
   return (
-    <div className="flex overflow-hidden animate-infinite-scroll whitespace-nowrap space-x-10 w-max">
-      <div className="flex flex-shrink-0 space-x-10 w-max">
+    <div className="flex overflow-hidden animate-infinite-scroll whitespace-nowrap space-x-10">
+      <div className="flex flex-shrink-0 space-x-10 animate-infinite-scroll whitespace-nowrap w-max">
         {repeatedImages.map((image, idx) => (
           <img
             key={idx}
