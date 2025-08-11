@@ -10,12 +10,13 @@ const App: FC = () => {
     setDarkMode((prev) => !prev);
     document.documentElement.classList.toggle('dark');
   };
-  return <div className="flex flex-col justify-center items-center h-screen bg-white text-black dark:bg-gray-900 dark:text-white">
-    <h1 className="text-3xl">Scroller Preview</h1>
-
+  return <div className={`flex flex-col justify-center gap-y-8 items-center h-screen
+                        bg-white text-black dark:bg-gray-900 dark:text-white
+                        ${darkMode ? 'dark' : ''}`}>
     <ToggleButton isDarkMode={darkMode} onToggle={toggleDarkMode} />
+    <h1 className="text-3xl">Scroller Preview</h1>
     <div>
-      <Scroller />
+      <Scroller darkMode={darkMode} />
       </div>
   </div>
 };
