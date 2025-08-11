@@ -1,14 +1,14 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *)); 
 
-
+/*add here?*/
 @layer utilities {
     @keyframes infinite-scroll {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(20%); 
+    transform: translateX(20%); /*-20% to reverse */
   }
 }
 
@@ -16,4 +16,7 @@
   animation: infinite-scroll 20s linear infinite;
 }
 
+.animate-infinite-scroll:hover {
+  animation-play-state: paused; /*delete if you don't want on-hover pause */
+}
 }
