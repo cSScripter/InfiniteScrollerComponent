@@ -1,5 +1,5 @@
 import reactLogo from '../assets/react.svg';
-import nextjsLogo from '../assets/nextjslogo.svg';
+import nextjsLogo from '../assets/nextjs-light.svg';
 import supabaseLogo from '../assets/supabaselogo.svg';
 import tailwindLogo from '../assets/tailwindlogo.svg';
 
