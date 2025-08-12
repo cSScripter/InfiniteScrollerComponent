@@ -15,6 +15,12 @@
 .animate-infinite-scroll {
   animation: infinite-scroll 20s linear infinite;
   will-change: transform;
+  /*ios smoothing*/
+  /* iOS GPU smoothness hints */
+  -webkit-transform: translateZ(0); /* Safari / iOS */
+  transform: translateZ(0); /* Standard */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .animate-infinite-scroll:hover {
