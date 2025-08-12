@@ -10,8 +10,11 @@ const Scroller: React.FC<ScrollerProps> = ({ darkMode }) => {
   const repeatCount = 10;
   const repeatedImages = Array(repeatCount).fill(images).flat();
 
+  // Simple iOS detection
+  // const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
   return (
-    <div className="flex overflow-hidden animate-infinite-scroll whitespace-nowrap space-x-10">
+    <div className="flex overflow-hidden whitespace-nowrap space-x-10">
       <div className="flex flex-shrink-0 space-x-10 animate-infinite-scroll whitespace-nowrap w-max">
         {repeatedImages.map((image, idx) => (
           <img
@@ -19,7 +22,7 @@ const Scroller: React.FC<ScrollerProps> = ({ darkMode }) => {
             src={image}
             alt={`Image ${idx}`}
             loading="lazy"
-            className="h-12 w-auto object-contain"
+            className="h-12 w-12 object-contain"
           />
         ))}
 
@@ -29,7 +32,7 @@ const Scroller: React.FC<ScrollerProps> = ({ darkMode }) => {
             src={image}
             alt={`Image ${idx + repeatedImages.length}`}
             loading="lazy"
-            className="h-12 w-auto object-contain"
+            className="h-12 w-12 object-contain"
           />
         ))}
       </div>
