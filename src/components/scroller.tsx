@@ -10,9 +10,6 @@ const Scroller: React.FC<ScrollerProps> = ({ darkMode }) => {
   const repeatCount = 10;
   const repeatedImages = Array(repeatCount).fill(images).flat();
 
-  // Simple iOS detection
-  // const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
   return (
     <div className="flex overflow-hidden whitespace-nowrap space-x-10">
       <div className="flex flex-shrink-0 space-x-10 animate-infinite-scroll whitespace-nowrap w-max">
